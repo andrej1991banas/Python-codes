@@ -1,4 +1,4 @@
-'''###diamond text exercise
+###diamond text exercise
 
 def rows(letter):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -24,4 +24,4 @@ def rows(letter):
     # Reverse and exclude the last element
     result = result_alpha + result_alpha_reverse
     return result
-'''
+
