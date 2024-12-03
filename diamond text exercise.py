@@ -1,4 +1,4 @@
-'''python
+
 def rows(letter):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let_pos = alphabet.find(letter.upper())
@@ -23,4 +23,4 @@ def rows(letter):
     # Reverse and exclude the last element
     result = result_alpha + result_alpha_reverse
     return result
-'''
+
