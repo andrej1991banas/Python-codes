@@ -1,0 +1,15 @@
+def is_paired(input_string):
+    options = {
+        ")" : "(",
+        "]" : "[",
+        "}" : "{"
+    }
+    stack = []
+    for char in input_string:
+        if char in '([{':
+            stack.append(char)
+        elif char in options:
+            if len(stack) == 0 or stack.pop() != options[char]:
+                return False
+
+    return len(stack) == 0
