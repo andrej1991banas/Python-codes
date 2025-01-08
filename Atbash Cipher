@@ -1,0 +1,49 @@
+#!/usr/bin/python
+
+atbash cipher
+
+plain = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
+         "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+cipher = sorted(plain, reverse= True)
+#sorting the plain list to alphabet in reverse
+
+def group_letters_to_string(code_list, group_size=5):
+    grouped_strings = []
+    for i in range(0, len(code_list), group_size):
+        grouped_strings.append("".join(code_list[i:i + group_size]))
+    return " ".join(grouped_strings)
+    #creating function for grouping str with 5 letters in each from the given list
+
+def encode(plain_text):
+    cipher_code = []
+    do_not_want = ",. "
+    for char in do_not_want:
+        plain_text = plain_text.replace(char, "")
+
+    plain_lower = plain_text.casefold()
+    #cleaning plain_text from whitespaces, dots and other characters
+    # we do not want in result
+    for char in plain_lower:
+        if char in plain:
+            index = plain.index(char)
+            cipher_code.append(cipher[index])
+        else:
+            cipher_code.append(char)
+    #creating instance of our result coding list
+    return group_letters_to_string(cipher_code, group_size=5)
+    #returning function with grouping out result list
+
+def decode(ciphered_text):
+    normal_text = [] #getting empty list ready for adding results
+    ciphered_no_whitespace = ciphered_text.replace(" ", "") #replacing spaces between groups in coded version
+    for char in ciphered_no_whitespace:
+        if char in cipher:
+            index = cipher.index(char)
+            normal_text.append(plain[index])
+            # adding decoded letters into the empty list
+        else:
+            normal_text.append(char)
+            #adding decoded letters that are not in cipher list into the empty list
+    return "".join(normal_text)
+        #returning string from the list normal_text joined together as a one single string
+
