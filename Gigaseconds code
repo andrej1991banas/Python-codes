@@ -1,0 +1,9 @@
+import datetime
+def add(moment):
+# Initializing a date and time
+    if not isinstance(moment, datetime.datetime):
+        raise ValueError ("expected a datetime object")
+# Calling the timedelta() function
+    time_change = datetime.timedelta(seconds = 1000_000_000)
+    new_time = moment + time_change
+    return new_time
