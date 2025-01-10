@@ -1,0 +1,20 @@
+def is_paired(input_string):
+    #setting up dictonairy with brackets
+    options = {
+        ")" : "(",
+        "]" : "[",
+        "}" : "{"
+    }
+    stack = []
+    #list for adding results of opening brackets to compare with for loop
+    for char in input_string:
+        if char in '([{':
+            stack.append(char)
+            #creating list of open bracket readz to compare
+        elif char in options:
+            if len(stack) == 0 or stack.pop() != options[char]:
+                return False
+            #checking if the stack list is empty and returning false as it means there
+            #is only closed bracket or interate with the pop from the list
+
+    return len(stack) == 0
