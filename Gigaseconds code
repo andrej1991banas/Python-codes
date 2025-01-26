@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import datetime
 def add(moment):
 # Initializing a date and time
