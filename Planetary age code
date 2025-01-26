@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 class SpaceAge:
     class SpaceAge:
         def __init__(self, seconds):
