@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 '''
 We are launching a deep space exploration rocket and we need a way to make sure the navigation system stays on target.
 
