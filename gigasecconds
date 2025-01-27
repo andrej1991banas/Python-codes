@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 '''
 The way we measure time is kind of messy. We have 60 seconds in a minute, and 60 minutes in an hour. 
 This comes from ancient Babylon, where they used 60 as the basis for their number system. We have 24 hours in a day, 7 days in a week, and how many days in a month? Well, for days in a month it depends not only on which month it is, but also on what type of calendar is used in the country you live in.
